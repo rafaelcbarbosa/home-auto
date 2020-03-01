@@ -2,7 +2,7 @@
 function submitdata() {
     var v_oauth_token=$('#oauth_token').val();
     var v_gate_command=$('#gate_command').val();
-    $('#success_para').html(\"<img class=\\\"small--height\\\" src=\\\"https://www.blogson.com.br/wp-content/uploads/2017/10/lg.colorful-progress-loader.gif\\\">\");
+    $('#success_para').html("<img class=\"small--height\" src=\"https://www.blogson.com.br/wp-content/uploads/2017/10/lg.colorful-progress-loader.gif\">");
 
     $.ajax( {
         type: 'post',
