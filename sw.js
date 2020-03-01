@@ -11,7 +11,6 @@ self.addEventListener('install', function(event) {
  
 if (!('fetch' in window)) { 
     console.log('Fetch API not found, try including the polyfill'); 
-    return; 
 } else { 
     self.addEventListener('fetch', function(event) { 
         event.respondWith(caches.match(event.request).then(function(response) { 
