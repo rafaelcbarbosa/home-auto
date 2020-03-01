@@ -50,4 +50,4 @@ if ('serviceWorker' in navigator) {
             console.log('CLIENT: ServiceWorker registration failed: ', err); 
         }); 
     }); 
-};
+}
