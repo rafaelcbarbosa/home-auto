@@ -36,7 +36,6 @@ if (!('fetch' in window)) {
             return response; 
             }).catch(function () { 
             console.log('Message E'); 
-    //res->print("            return caches.match('/sw-test/gallery/myLittleVader.jpg'); 
             return; 
             }); 
             } 
