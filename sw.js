@@ -2,8 +2,8 @@ self.addEventListener('install', function(event) {
     event.waitUntil( 
         caches.open('v1').then(function(cache) { 
             return cache.addAll([ 
-                '/css/style.css', 
-                '/js/main.js' 
+                'https://rafaelcbarbosa.github.io/home-auto/css/style.css', 
+                'https://rafaelcbarbosa.github.io/home-auto/js/main.js' 
             ]); 
         }) 
     ); 
