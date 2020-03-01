@@ -41,7 +41,7 @@ function showhide(id) {
 if ('serviceWorker' in navigator) { 
     console.log('CLIENT: service worker registration in progress.'); 
     window.addEventListener('load', function() { 
-        navigator.serviceWorker.register("https://rafaelcbarbosa.github.io/home-auto/sw.js").then(function(registration) { 
+        navigator.serviceWorker.register('https://rafaelcbarbosa.github.io/home-auto/sw.js').then(function(registration) { 
             // Registration was successful 
             console.log('CLIENT: ServiceWorker registration successful with scope: ', registration.scope); 
         }, function(err) { 
