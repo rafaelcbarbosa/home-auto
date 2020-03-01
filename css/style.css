@@ -1,1 +1,76 @@
+html {
+    font-family: sans-serif;
+    display: inline-block; 
+    margin: 0px auto;
+    text-align: center; 
+},
+
+.fullscreen {
+display: flex;
+height: 100%;
+margin: 0;
+padding: 0;
+width: 100%;
+}
+
+.container {
+margin: auto;
+text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+body {
+    font-family: sans-serif;
+}  
+
+.circular--square {
+    border-radius: 50%;
+}
+
+.small--height {
+    width: 50px;  
+    height: 18px; 
+    object-fit: cover;
+}  
+
+.button { 
+    background-color: #000000; 
+    border: none; 
+    color: white; 
+    padding: 16px 40px; 
+    text-decoration: none; 
+    font-size: 30px; 
+    margin: 2px; 
+    cursor: pointer;
+}
+
+.inline {
+    display: inline; 
+}
+
+.link-button {
+    background: none; 
+    border: none; 
+    color: blue; 
+    text-decoration: underline; 
+    cursor: pointer; 
+    font-size: 1em; 
+    font-family: sans-serif; 
+}
+
+.link-button: focus { 
+    outline: none; 
+}
+
+.link-button: active { 
+    color: red; 
+}
+
+body {
+      font-family: sans-serif;
+      background-color: orange;
+}
 
