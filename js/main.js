@@ -1,11 +1,11 @@
-function submitdata() {
-    var v_oauth_token=$('#oauth_token').val();
+/* ---------- */
+function submitdata() {    var v_oauth_token=$('#oauth_token').val();
     var v_gate_command=$('#gate_command').val();
     $('#success_para').html("<img class=\"small--height\" src=\"https://rafaelcbarbosa.github.io/home-auto/images/lg.colorful-progress-loader.gif\">");
 
     $.ajax( {
         type: 'post',
-        url: 'https://rafaelcbarbosa.github.io/home-auto/trigger',
+        url: '/trigger',
         data: {
             oauth_token:v_oauth_token,
             gate_command:v_gate_command
@@ -22,7 +22,7 @@ return false;
 function onSignIn(googleUser) {
     const form = document.createElement("form");
     form.method = "post";
-    form.action = "https://rafaelcbarbosa.github.io/home-auto/index.html";
+    form.action = "/index.html";
     const oauth_token = document.createElement("input");
     oauth_token.type = "hidden";
     oauth_token.name = "oauth_token";
@@ -37,7 +37,6 @@ function showhide(id) {
     e.style.display = 'block';
 }
 
-    
 if ('serviceWorker' in navigator) { 
     console.log('CLIENT: service worker registration in progress.'); 
     window.addEventListener('load', function() { 
@@ -49,4 +48,4 @@ if ('serviceWorker' in navigator) {
             console.log('CLIENT: ServiceWorker registration failed: ', err); 
         }); 
     }); 
-}
+} 
