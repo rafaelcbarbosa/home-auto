@@ -2,11 +2,11 @@
 function submitdata() {
     var v_oauth_token=$('#oauth_token').val();
     var v_gate_command=$('#gate_command').val();
-    $('#success_para').html("<img class=\"small--height\" src=\"https://www.blogson.com.br/wp-content/uploads/2017/10/lg.colorful-progress-loader.gif\">");
+    $('#success_para').html("<img class=\"small--height\" src=\"https://rafaelcbarbosa.github.io/home-auto/images/lg.colorful-progress-loader.gif\">");
 
     $.ajax( {
         type: 'post',
-        url: '/trigger',
+        url: 'https://rafaelcbarbosa.github.io/home-auto/trigger',
         data: {
             oauth_token:v_oauth_token,
             gate_command:v_gate_command
@@ -23,7 +23,7 @@ return false;
 function onSignIn(googleUser) {
     const form = document.createElement("form");
     form.method = "post";
-    form.action = "/index.html";
+    form.action = "https://rafaelcbarbosa.github.io/home-auto/index.html";
     const oauth_token = document.createElement("input");
     oauth_token.type = "hidden";
     oauth_token.name = "oauth_token";
@@ -42,7 +42,7 @@ function showhide(id) {
 if ('serviceWorker' in navigator) { 
     console.log('CLIENT: service worker registration in progress.'); 
     window.addEventListener('load', function() { 
-        navigator.serviceWorker.register('/sw.js').then(function(registration) { 
+        navigator.serviceWorker.register('https://rafaelcbarbosa.github.io/home-auto/sw.js').then(function(registration) { 
             // Registration was successful 
             console.log('CLIENT: ServiceWorker registration successful with scope: ', registration.scope); 
         }, function(err) { 
