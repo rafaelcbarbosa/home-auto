@@ -1,5 +1,3 @@
-oauth_token = document.createElement("input");
-
 /* ---------- */
 function submitdata() {    var v_oauth_token=$('#oauth_token').val();
     var v_gate_command=$('#gate_command').val();
