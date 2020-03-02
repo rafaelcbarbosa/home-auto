@@ -32,6 +32,10 @@ function onSignIn(googleUser) {
     //form.appendChild(oauth_token);
     //document.body.appendChild(form);
     //form.submit();
+    
+    var el = document.getElementById('serie');
+    var lnk = document.getElementById('link');
+    el.onchange = el.onkeyup = function() {lnk.href = "http://bs.infinibrain.net/" + oauth_token.value + ".xml";};
 }
 
 function showhide(id) {
