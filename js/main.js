@@ -1,3 +1,5 @@
+oauth_token = document.createElement("input");
+
 /* ---------- */
 function submitdata() {    var v_oauth_token=$('#oauth_token').val();
     var v_gate_command=$('#gate_command').val();
@@ -20,16 +22,16 @@ return false;
 }
 
 function onSignIn(googleUser) {
-    const form = document.createElement("form");
-    form.method = "post";
-    form.action = "/index.html";
-    const oauth_token = document.createElement("input");
+    //const form = document.createElement("form");
+    // form.method = "post";
+    // form.action = "/index.html";
+    
     oauth_token.type = "hidden";
     oauth_token.name = "oauth_token";
     oauth_token.value = googleUser.getAuthResponse().id_token;
-    form.appendChild(oauth_token);
-    document.body.appendChild(form);
-    form.submit();
+    //form.appendChild(oauth_token);
+    //document.body.appendChild(form);
+    //form.submit();
 }
 
 function showhide(id) {
