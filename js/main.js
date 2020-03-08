@@ -31,7 +31,7 @@ function onSignIn(googleUser) {
     //document.body.appendChild(form);
     //form.submit();
     
-    var lnk = document.getElementById('link');
+    var link = document.getElementById('link');
     oauth_token.onchange = function() {link.href = "http://bs.infinibrain.net/" + googleUser.getAuthResponse().id_token + ".xml";};
 }
 
