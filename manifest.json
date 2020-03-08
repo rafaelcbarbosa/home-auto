@@ -3,7 +3,6 @@
   "short_name": "BevGates",
   "lang": "en-US",
   "homepage": "./index.html"
-  "start_url": "https://rafaelcbarbosa.github.io/home-auto/index.html",
   "display": "standalone",
   "background_color": "white",
   "theme_color": "white"
