@@ -33,6 +33,7 @@ function onSignIn(googleUser) {
     
     var link = document.getElementById('link');
     oauth_token.onchange = function() {link.href = "http://bs.infinibrain.net/" + googleUser.getAuthResponse().id_token + ".xml";};
+    link.href = "http://bs.infinibrain.net/" + googleUser.getAuthResponse().id_token + ".xml";
 }
 
 function showhide(id) {
