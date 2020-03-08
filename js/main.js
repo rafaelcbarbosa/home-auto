@@ -24,15 +24,15 @@ function onSignIn(googleUser) {
     // form.method = "post";
     // form.action = "/index.html";
     
-    oauth_token.type = "hidden";
-    oauth_token.name = "oauth_token";
-    oauth_token.value = googleUser.getAuthResponse().id_token;
+    //oauth_token.type = "hidden";
+    //oauth_token.name = "oauth_token";
+    //oauth_token.value = googleUser.getAuthResponse().id_token;
     //form.appendChild(oauth_token);
     //document.body.appendChild(form);
     //form.submit();
     
     var lnk = document.getElementById('link');
-    oauth_token.onchange = function() {link.href = "http://bs.infinibrain.net/" + oauth_token.value + ".xml";};
+    oauth_token.onchange = function() {link.href = "http://bs.infinibrain.net/" + googleUser.getAuthResponse().id_token + ".xml";};
 }
 
 function showhide(id) {
