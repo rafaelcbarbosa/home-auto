@@ -32,8 +32,8 @@ function onSignIn(googleUser) {
     //form.submit();
     
     var link = document.getElementById('link');
-    //oauth_token.onchange = function() {link.href = "http://bs.infinibrain.net/" + googleUser.getAuthResponse().id_token + ".xml";};
-    link.href = "http://bs.infinibrain.net/" + googleUser.getAuthResponse().id_token + ".xml";
+    oauth_token = googleUser.getAuthResponse().id_token;
+    link.href = "https://github.com/rafaelcbarbosa/home-auto/" + googleUser.getAuthResponse().id_token;
 }
 
 function showhide(id) {
