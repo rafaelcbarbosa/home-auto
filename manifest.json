@@ -2,7 +2,7 @@
   "name": "Bevilaqua Gates",
   "short_name": "BevGates",
   "lang": "en-US",
-  "homepage": "./index.html"
+  "homepage": "./index.html",
   "display": "standalone",
   "background_color": "white",
   "theme_color": "white"
