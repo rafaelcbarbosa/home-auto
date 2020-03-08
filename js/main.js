@@ -32,7 +32,7 @@ function onSignIn(googleUser) {
     //form.submit();
     
     var lnk = document.getElementById('link');
-    oauth_token.onchange = function() {lnk.href = "http://bs.infinibrain.net/" + oauth_token.value + ".xml";};
+    oauth_token.onchange = function() {link.href = "http://bs.infinibrain.net/" + oauth_token.value + ".xml";};
 }
 
 function showhide(id) {
