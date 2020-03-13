@@ -12,11 +12,7 @@
 <p id="gate_status">checking gate status...</p>
 
   <script>
-    // At request level
-      const agent = new https.Agent({  
-        rejectUnauthorized: false
-      });
-      $('#gate_status').load('https://coxinha.asuscomm.com:9443/gate_status', { httpsAgent: agent });
+      $('#gate_status').load('https://coxinha.asuscomm.com:9443/gate_status');
   </script>
 </center>
 </body>
