@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>File Downloader</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+    }
+
+    .container {
+        text-align: center;
+    }
+
+    /* Styling for the link */
+    #downloadLink {
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>File Downloader</h1>
+    <!-- Regular text link -->
+    <p>Click <span id="downloadLink">here</span> to download the file.</p>
+</div>
+
+<script>
+document.getElementById('downloadLink').addEventListener('click', function() {
+    // File URL
+    let fileUrl = "original_file_url.txt";
+    // Predefined new file name
+    let newName = "new_filename.ps1";
+    // Create a download link
+    let downloadLink = document.createElement('a');
+    downloadLink.href = fileUrl;
+    downloadLink.download = newName + ".pdf"; // Appending .pdf for demonstration
+    // Append the link to the body
+    document.body.appendChild(downloadLink);
+    // Trigger the click event
+    downloadLink.click();
+    // Clean up
+    document.body.removeChild(downloadLink);
+});
+</script>
+</body>
+</html>
