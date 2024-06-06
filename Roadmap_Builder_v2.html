@@ -30,7 +30,7 @@
 </head>
 <body>
 <div class="container">
-    <h1>File Downloader</h1>
+    <h1>File Downloader V2</h1>
     <!-- Regular text link -->
     <p>Click <span id="downloadLink">here</span> to download the file.</p>
 </div>
@@ -39,12 +39,11 @@
 document.getElementById('downloadLink').addEventListener('click', function() {
     // File URL
     let fileUrl = "original_file_url.txt";
-    // Predefined new file name
-    let newName = "new_filename.ps1";
     // Create a download link
     let downloadLink = document.createElement('a');
     downloadLink.href = fileUrl;
-    downloadLink.download = newName + ".pdf"; // Appending .pdf for demonstration
+    // Predefined new file name
+    downloadLink.download = "new_filename.ps1";
     // Append the link to the body
     document.body.appendChild(downloadLink);
     // Trigger the click event
