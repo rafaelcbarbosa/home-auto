@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>File Rename</title>
+</head>
+<body>
+
+<h2>File Rename v2</h2>
+
+<p>Click the button to rename and download the file.</p>
+
+<button onclick="renameAndDownload()">Rename and Download</button>
+
+<script>
+function renameAndDownload() {
+    // Original file URL
+    var originalFileUrl = "original_file_url.txt"; // Replace this with the URL of your original file
+
+    // New file name
+    var newFileName = "new_filename.ps1"; // Replace this with the desired new file name
+
+    // Fetch the original file
+    fetch(originalFileUrl)
+        .then(response => response.blob())
+        .then(blob => {
+            // Create a dummy link element
+            var link = document.createElement('a');
+
+            // Create a Blob URL for the blob
+            var blobUrl = window.URL.createObjectURL(blob);
+
+            // Set the href attribute with the Blob URL
+            link.setAttribute('href', blobUrl);
+
+            // Set the download attribute with the new file name
+            link.setAttribute('download', newFileName);
+
+            // Append the link to the body
+            document.body.appendChild(link);
+
+            // Click the link programmatically to trigger the download
+            link.click();
+
+            // Remove the link from the body
+            document.body.removeChild(link);
+
+            // Revoke the Blob URL
+            window.URL.revokeObjectURL(blobUrl);
+        })
+        .catch(error => console.error('Error fetching file:', error));
+}
+</script>
+
+</body>
+</html>
